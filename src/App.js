@@ -11,7 +11,10 @@ function App() {
 
   useEffect(() => {
     // runs only once when the component is loaded on the page
-    let saved = localStorage.getItem("notes");
+
+    let saved = localStorage.getItem("notes")
+      ? localStorage.getItem("notes")
+      : [];
     if (saved.length > 0) {
       //there's something in the localStorage
       setNotes(JSON.parse(saved));
