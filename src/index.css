@@ -14,3 +14,116 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 2px solid purple;
+}
+#menu-center {
+  flex: 0 0 20%;
+  display: flex;
+}
+#menu-left {
+  margin: 10px;
+}
+#title-holder {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#title-holder p {
+  color: gray;
+}
+.noteText {
+  display: flex;
+  flex: 1;
+}
+.newNotes {
+  display: flex;
+  flex: 0 0 20%;
+  border-right: 2px solid whitesmoke;
+  flex-direction: column;
+}
+.editor {
+  flex: 1;
+}
+#notesColumn {
+  flex: 1;
+}
+#addNew {
+  flex: 0 0 20%;
+  text-align: center;
+  cursor: pointer;
+}
+#addNew:hover {
+  background: #eee;
+}
+#titleDate {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.noteHead {
+  display: flex;
+  flex-direction: row;
+  border-top: purple;
+}
+#buttons {
+  flex: 0 0 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+#buttons div {
+  padding: 10px;
+  cursor: pointer;
+}
+.note-body {
+  border-top: 2px solid whitesmoke;
+  padding: 20px;
+}
+
+.notePlus {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid whitesmoke;
+}
+
+#expand {
+  cursor: pointer;
+}
+
+li.selected {
+  background-color: #f4dceb;
+}
+
+.notesList {
+  margin: 5px;
+  padding: 0;
+}
+
+#initialState {
+  line-height: 3em;
+  text-align: center;
+  color: gray;
+}
+
+#emptyContainer {
+  display: flex;
+  justify-content: center;
+  margin: 250px;
+  font-size: 2rem;
+  color: gray;
+}
+
+#addNew {
+  order: 2;
+  margin-left: auto;
+}
