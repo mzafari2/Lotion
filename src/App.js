@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "react-quill/dist/quill.snow.css";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import localStorage from "localStorage";
 import { useNavigate } from "react-router-dom";
 
 function App() {
+  const { Id } = useParams();
   const [notes, setNotes] = useState([]);
   const [showNewNotes, setShowNewNotes] = useState(true);
-  const [selectedNoteIndex, setSelectedNoteIndex] = useState(-1);
+  const [selectedNoteIndex, setSelectedNoteIndex] = useState(Id ? Id : -1);
 
   useEffect(() => {
     // runs only once when the component is loaded on the page
